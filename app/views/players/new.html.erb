@@ -1,0 +1,27 @@
+<h1>New Player</h1>
+
+
+
+<%= render 'form', player: @player %>
+
+<%= link_to 'Back', players_path %>
+
+<%= form_for :club, url: players_path do |f| %>
+  <p>
+    <%= f.label :First_Name %><br>
+    <%= f.text_field :firstName %>
+  </p>
+
+  <p>
+    <%= f.label :Last_Name %><br>
+    <%= f.text_field :lastName %>
+  </p>
+  <p>
+    <%= f.label :Age %><br>
+    <%= f.text_field :age %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
