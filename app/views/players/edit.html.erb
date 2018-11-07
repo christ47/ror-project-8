@@ -2,5 +2,36 @@
 
 <%= render 'form', player: @player %>
 
-<%= link_to 'Show', @player %> |
 <%= link_to 'Back', players_path %>
+
+<%= form_for :player, url: players_path do |f| %>
+  <p>
+    <%= f.label :First_Name %><br>
+    <%= f.text_field :firstName %>
+  </p>
+
+  <p>
+    <%= f.label :Last_Name %><br>
+    <%= f.text_field :lastName %>
+  </p>
+  <p>
+    <%= f.label :Club %><br>
+    <%= f.text_field :club_id %>
+  </p>
+
+  <p>
+    <%= f.label :Nationality %><br>
+    <%= f.text_field :nationality %>
+  </p>
+  <p>
+    <%= f.label :Position %><br>
+    <%= f.text_field :position %>
+  </p>
+  <p>
+    <%= f.label :Age %><br>
+    <%= f.text_field :age %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

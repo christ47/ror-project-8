@@ -10,11 +10,20 @@
   </thead>
 
   <tbody>
+    <tr>
+      <td>First Name</td>
+      <td>Last Name</td>
+      <td>Age</td>
+      <td>Nationality</td>
+      <td>Position</td>
+    </tr>
     <% @players.each do |player| %>
       <tr>
         <td><%= player.firstName %></td>
         <td><%= player.lastName %></td>
         <td><%= player.age %></td>
+        <td><%= player.nationality %></td>
+        <td><%= player.position %></td>
         <td><%= link_to 'Show', player %></td>
         <td><%= link_to 'Edit', edit_player_path(player) %></td>
         <td><%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -26,3 +35,4 @@
 <br>
 
 <%= link_to 'New Player', new_player_path %>
+<a href="/clubs">See Club List</a>
