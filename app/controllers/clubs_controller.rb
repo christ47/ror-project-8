@@ -12,8 +12,9 @@ class ClubsController < ApplicationController
   def show
     @club = Club.find(params[:id])
     @players = Player.where(club_id: @club.id)
+    @comments = Club.find(params[:id])
   end
-
+# Comment.where(id: @club.id)
   # GET /clubs/new
   def new
     @club = Club.new

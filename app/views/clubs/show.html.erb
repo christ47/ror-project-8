@@ -6,21 +6,42 @@
 
   <h1>Players</h1>
   <% @players.each do |player| %>
+
+      <p><%= player.firstName %> <%= player.lastName %></p>
+      <p><%= player.age %></p>
+      <p><%= player.nationality %></p>
+      <p><%= player.position %></p>
+      <tr><%= link_to 'Show', player %></tr>
+      <tr><%= link_to 'Edit', edit_player_path(player) %></tr>
+      <tr><%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %></tr>
+
+  <% end %>
+  <%= link_to 'Edit', edit_club_path(@club) %>
+  <h3> Comments </h3>
+
+  <% @club.comments.each do |comment| %>
     <tr>
-      <td><%= player.firstName %></td>
-      <td><%= player.lastName %></td>
-      <td><%= player.age %></td>
-      <td><%= player.nationality %></td>
-      <td><%= player.position %></td>
-      <td><%= link_to 'Show', player %></td>
-      <td><%= link_to 'Edit', edit_player_path(player) %></td>
-      <td><%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <h4><%= comment.username %></h4>
+      <p><%= comment.body %> </p>
+
+
     </tr>
   <% end %>
-
-
-
-
+  <h3>Add Comment</h3>
+  <%= form_for([@club, @club.comments.build]) do |form| %>
   <p>
-  <%= link_to 'Edit', edit_club_path(@club) %> |
+  <%= form.label :Username %><br>
+  <%= form.text_field :username %>
+</p>
+
+<p>
+  <%= form.label :Post %><br>
+  <%= form.text_field :body %>
+</p>
+
+
+<div class="actions">
+  <%= form.submit %>
+</div>
+  <% end %>
   <%= link_to 'Back', clubs_path %>
