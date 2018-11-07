@@ -10,6 +10,19 @@
       </ul>
     </div>
   <% end %>
+  <p>
+    <%= form.label :Name %><br>
+    <%= form.text_field :name %>
+  </p>
+
+  <p>
+    <%= form.label :Location %><br>
+    <%= form.text_field :location %>
+  </p>
+  <p>
+    <%= form.label :Founded %><br>
+    <%= form.text_field :date_of_establishment %>
+  </p>
 
   <div class="actions">
     <%= form.submit %>
