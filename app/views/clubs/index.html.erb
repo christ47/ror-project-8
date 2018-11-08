@@ -18,7 +18,7 @@
       </tr>
     <% @clubs.each do |club| %>
       <tr>
-        <td><a href="/players.<%= club.id %>"><%= club.name %></a></td>
+        <td><a href="/clubs/<%= club.id %>"><%= club.name %></a></td>
         <td><%= club.location %></td>
         <td><%= club.date_of_establishment %></td>
           <td><%= club.id %></td>
