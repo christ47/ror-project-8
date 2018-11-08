@@ -1,0 +1,54 @@
+<%= form_with(model: player, local: true) do |form| %>
+  <% if player.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(player.errors.count, "error") %> prohibited this player from being saved:</h2>
+
+      <ul>
+      <% player.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <p>
+      <%= form.label :First_Name %><br>
+      <%= form.text_field :firstName %>
+    </p>
+
+    <p>
+      <%= form.label :Last_Name %><br>
+      <%= form.text_field :lastName %>
+    </p>
+    <p>
+      <%= form.label :Club %><br>
+      <%= form.text_field :club_id %>
+    </p>
+
+    <p>
+      <%= form.label :Nationality %><br>
+      <%= form.text_field :nationality %>
+    </p>
+    <p>
+      <%= form.label :Position %><br>
+      <%= form.text_field :position %>
+    </p>
+    <p>
+      <%= form.label :Age %><br>
+      <%= form.text_field :age %>
+    </p>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+<div>
+<h3> Assigning Player's CLub</h3>
+<h4><strong> Use the Club ID to assign a player to a club<strong></h4>
+
+
+<% @clubs.each do |club| %>
+<p> Club Name: <%= club.name %></p>
+<p>Club ID: <%= club.id %></p>
+<% end %>
+<div>

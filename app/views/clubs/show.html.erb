@@ -1,0 +1,63 @@
+  <p id="notice"><%= notice %></p>
+
+  <h1><%= @club.name %></h1>
+  <h3><%= @club.location %></h3>
+  <h4><%= @club.date_of_establishment %></h4>
+
+  <h1>Players</h1>
+  <thead>
+    <tr>
+      <th></th>
+  </thead>
+  <table>
+  <tbody>
+    <tr>
+      <td class="col-md-3">Name<td>
+      <td class="col-md-3">Age</td>
+      <td class="col-md-3">Nationality</td>
+      <td class="col-md-3">Position</td>
+    </tr>
+          <tr>
+  <% @players.each do |player| %>
+
+      <td class="col-md-3"><%= player.firstName %> <%= player.lastName %></td>
+      <td class="col-md-3"><%= player.age %></td>
+      <td class="col-md-3"><%= player.nationality %></td>
+      <td class="col-md-3"><%= player.position %></td>
+
+
+        <td><%= link_to 'Edit', edit_player_path(player) %></td>
+      <td><%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+
+  <% end %>
+  </tbody>
+  </table>
+  <h3> Comments </h3>
+
+  <% @club.comments.each do |comment| %>
+    <tr>
+      <h4><%= comment.username %></h4>
+      <p><%= comment.body %> </p>
+
+
+    </tr>
+  <% end %>
+  <h3>Add Comment</h3>
+  <%= form_for([@club, @club.comments.build]) do |form| %>
+  <p>
+  <%= form.label :Username %><br>
+  <%= form.text_field :username %>
+</p>
+
+<p>
+  <%= form.label :Post %><br>
+  <%= form.text_field :body %>
+</p>
+
+
+<div class="actions">
+  <%= form.submit %>
+</div>
+  <% end %>
+  <%= link_to 'Back', clubs_path %>
