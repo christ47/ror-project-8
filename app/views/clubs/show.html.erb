@@ -5,18 +5,34 @@
   <h4><%= @club.date_of_establishment %></h4>
 
   <h1>Players</h1>
+  <thead>
+    <tr>
+      <th></th>
+  </thead>
+  <table>
+  <tbody>
+    <tr>
+      <td class="col-md-3">Name<td>
+      <td class="col-md-3">Age</td>
+      <td class="col-md-3">Nationality</td>
+      <td class="col-md-3">Position</td>
+    </tr>
+          <tr>
   <% @players.each do |player| %>
 
-      <p><%= player.firstName %> <%= player.lastName %></p>
-      <p><%= player.age %></p>
-      <p><%= player.nationality %></p>
-      <p><%= player.position %></p>
-      <tr><%= link_to 'Edit', edit_player_path(player) %></tr>
-      <tr><%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %></tr>
+      <td class="col-md-3"><%= player.firstName %> <%= player.lastName %></td>
+      <td class="col-md-3"><%= player.age %></td>
+      <td class="col-md-3"><%= player.nationality %></td>
+      <td class="col-md-3"><%= player.position %></td>
+
+
+        <td><%= link_to 'Edit', edit_player_path(player) %></td>
+      <td><%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
 
   <% end %>
-  <%= link_to 'Edit', edit_club_path(@club) %>
-
+  </tbody>
+  </table>
   <h3> Comments </h3>
 
   <% @club.comments.each do |comment| %>
