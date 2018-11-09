@@ -2,7 +2,7 @@
 
 The ror-project-one-8 app was created for viewing the statistics of Premier League teams and footballers. By selecting teams on the homepage, players for the team can be viewed. The app has an option to add, edit or delete teams and players. User's who wish to express their opinion on different teams can leave comments under each team. This app aims to provide information to Premier League fans and provides a space for this community to interact.
 
-The app is mainly built with Ruby-On-Rails (Ruby 2.5.3) with conjunction with complimentary technologies for styling and interactive behaviour. A Bootstrap framework alongside JavaScript was implemented to design the webpage. The app operates with a Postgres database which can be accessed via Docker. Databases for deployed versions can be found in the Heroku file's database. For Deployment please refer to the GitHub or Heroku link at the bottom of this file.
+The app is mainly built with Ruby-On-Rails (Ruby 2.5.3) with conjunction with complimentary technologies for styling and interactive behaviour. A Bootstrap framework alongside JavaScript was implemented to design the webpage. The app operates with a PostgreSQL database which can be accessed via Docker. Databases for deployed versions can be found in the Heroku file's database. For Deployment please refer to the GitHub or Heroku link at the bottom of this file.
 
 The main complication faced whilst developing this app was presenting team players on individual club's show page. Through logic and research a function was derived to identify players with a matching Club_ID to the club's ID.
 
