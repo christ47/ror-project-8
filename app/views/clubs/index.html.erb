@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Clubs</h1>
+<h1 align="center">Clubs</h1>
 <table class="table">
   <thead class="thead-dark">
     <tr>
@@ -22,23 +22,19 @@
     <% end %>
   </tbody>
 </table>
-
-
-
-
-
 <br>
-
+<div class="flex">
 <strong><%= link_to 'New Club', new_club_path %>
 <a href="/players">See Players List</a><strong>
 
-<br>
-  <button type="button" onclick="myFunction()">Instructions</button>
+
+  <button class="instruct" type="button" onclick="myFunction()" >Instructions</button>
 
 <p id="change"></p>
 
 <script>
 function myFunction() {
-    document.getElementById("change").innerHTML = "Welcome to the I.Christie's Primier League App! Here you can view players and teams Stats. Have your opinion heard by leaving comments about different teams for all users to see";
+    document.getElementById("change").innerHTML = "Welcome to the I.Christie's Premier League App! Here you can view players and teams Stats. Have your opinion heard by leaving comments about different teams for all users to see";
 }
 </script>
+</div>

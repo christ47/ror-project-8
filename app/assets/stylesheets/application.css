@@ -44,3 +44,21 @@ margin-left: 27%;
   text-decoration: underline;
   background-color: white;
 }
+
+
+.flex{
+  text-align: center;
+
+}
+/* h1{
+  text-align: center;
+} */
+
+.centre{
+
+  text-align: center;
+}
+.floatleft{
+  float: right;
+ padding-top: 0px;
+}
