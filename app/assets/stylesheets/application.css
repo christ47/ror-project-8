@@ -20,3 +20,27 @@ body{
 .container{
   /* text-align: center; */
 }
+table{
+  border: solid black 2px;
+}
+.tobecentred{
+
+  text-align: center;
+}
+
+.float{
+
+margin-left: 27%;
+}
+
+
+.comments{
+  text-align: center;
+  border: solid black 2px;
+  /* padding-left: 40%; */
+}
+
+.comments h3 {
+  text-decoration: underline;
+  background-color: white;
+}

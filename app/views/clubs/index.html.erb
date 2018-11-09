@@ -1,36 +1,44 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Clubs</h1>
-
-<table>
-  <thead>
+<table class="table">
+  <thead class="thead-dark">
     <tr>
-      <th colspan="3"></th>
+      <th scope="col">Club Name</th>
+      <th scope="col">Location</th>
+      <th scope="col">Founded</th>
+      <th scope="col">Options</th>
     </tr>
   </thead>
-
   <tbody>
-      <tr>
-        <td>Club Name</td>
-        <td>Location</td>
-        <td>Founded</td>
-        <td>Club ID</td>
-      </tr>
-    <% @clubs.each do |club| %>
-      <tr>
-        <td><a href="/clubs/<%= club.id %>"><%= club.name %></a></td>
-        <td><%= club.location %></td>
-        <td><%= club.date_of_establishment %></td>
-          <td><%= club.id %></td>
-        <td><%= link_to 'Show', club %></td>
-        <td><%= link_to 'Edit', edit_club_path(club) %></td>
-        <td><%= link_to 'Destroy', club, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <% @clubs.each do |club| %>
+    <tr>
+      <th scope="row"><a href="/clubs/<%= club.id %>"><%= club.name %></a></th>
+  <td><%= club.location %></td>
+  <td><%= club.date_of_establishment %></td>
+  <td><%= link_to 'Edit', edit_club_path(club) %>
+  <%= link_to 'Destroy', club, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
     <% end %>
   </tbody>
 </table>
 
+
+
+
+
 <br>
 
-<%= link_to 'New Club', new_club_path %>
-<a href="/players">See Players List</a>
+<strong><%= link_to 'New Club', new_club_path %>
+<a href="/players">See Players List</a><strong>
+
+<br>
+  <button type="button" onclick="myFunction()">Instructions</button>
+
+<p id="change"></p>
+
+<script>
+function myFunction() {
+    document.getElementById("change").innerHTML = "Welcome to the I.Christie's Primier League App! Here you can view players and teams Stats. Have your opinion heard by leaving comments about different teams for all users to see";
+}
+</script>

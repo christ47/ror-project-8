@@ -1,12 +1,30 @@
 <p id="notice"><%= notice %></p>
 
-  <h1><%= @player.firstName %> <%= @player.lastName %> </h1>
 
-  <h3>Player Stats</h3>
+  <h3 class="tobecentred">Player Stats</h3>
+<br>
+<table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Nationality</th>
+      <th scope="col">Position</th>
+      <th scope="col">Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><%= @player.firstName %> <%= @player.lastName %></th>
+      <td><%= @player.nationality %></td>
+      <td><%= @player.position %></td>
+      <td><%= @player.age %></td>
+    </tr>
 
-  <p><%= @player.nationality %></p>
-  <p><%= @player.position %></p>
-  <p><%= @player.age %></p>
-  <p><%= @player.club_id %></p>
+  </tbody>
+</table>
+<strong>
 <%= link_to 'Edit', edit_player_path(@player) %> |
 <%= link_to 'Back', players_path %>
+</strong>
+
+<img class="float" src="/images/football-player.png" alt="PLayer" height="300px" width="300px">

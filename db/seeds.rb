@@ -9,11 +9,11 @@ Club.create!([
   {name: "Watford FC", user_id: nil, location: "Watford", date_of_establishment: "1881-05-24"}
 ])
 Comment.create!([
-  {username: "", body: "", club_id: 6},
-  {username: "", body: "", club_id: 6},
-  {username: "", body: "", club_id: 6},
-  {username: "", body: "", club_id: 1},
-  {username: "", body: "", club_id: 1},
+  {username: "TerrySucks", body: "We need to play more attacking football m8", club_id: 6},
+  {username: "LillieScott", body: "Huge Improvements this year. A alot of progress to be made", club_id: 6},
+  {username: "SamLikesJam", body: "I like Jam", club_id: 6},
+  {username: "Paul342", body: "Wenger Out", club_id: 1},
+  {username: "JohnnyTest", body: "Wenger In", club_id: 1},
   {username: "", body: "", club_id: 1},
   {username: "", body: "", club_id: 1},
   {username: "", body: "", club_id: 1}
