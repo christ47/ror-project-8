@@ -8,6 +8,6 @@ The main complication faced whilst developing this app was presenting team playe
 
 The Objectives of my Second Sprint would be aimed at optimising the user's experience. An admin user capable of modifying any team or player is to be produced. The admin user would be able to delete any comment made. Users who's job string is "manager" or "director" would be the only users capable of modifying teams. Each user is to be assigned a username for comments during their sign up. The function to add comments is currently under construction as comments can only be added through the rails console.
 
-Deployment instructions
+Deployment Options
 GitHub: https://github.com/christ47/ror-project-8
-Heroku: https://dashboard.heroku.com/apps/boiling-woodland-39802/deploy/github
+Heroku: https://boiling-woodland-39802.herokuapp.com/
