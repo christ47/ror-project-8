@@ -1,3 +1,4 @@
+
 Club.create!([
   {name: "Arsenal FC", user_id: 1, location: "London", date_of_establishment: "1886-09-27"},
   {name: "Chelsea", user_id: nil, location: "London", date_of_establishment: "1897-12-23"},
@@ -9,14 +10,16 @@ Club.create!([
   {name: "Watford FC", user_id: nil, location: "Watford", date_of_establishment: "1881-05-24"}
 ])
 Comment.create!([
-  {username: "TerrySucks", body: "We need to play more attacking football m8", club_id: 6},
-  {username: "LillieScott", body: "Huge Improvements this year. A alot of progress to be made", club_id: 6},
-  {username: "SamLikesJam", body: "I like Jam", club_id: 6},
-  {username: "Paul342", body: "Wenger Out", club_id: 1},
-  {username: "JohnnyTest", body: "Wenger In", club_id: 1},
-  {username: "", body: "", club_id: 1},
-  {username: "", body: "", club_id: 1},
-  {username: "", body: "", club_id: 1}
+  {username: "MikeLikesBikes", body: "Love a good bike me", club_id: 6},
+  {username: "MikeLikesBikes", body: "Love a good bike me", club_id: 6},
+  {username: "MikeLikesBikes", body: "Love a good bike me", club_id: 6},
+  {username: "MikeLikesBikes", body: "Love a good bike me", club_id: 1},
+  {username: "MikeLikesBikes", body: "Love a good bike me", club_id: 1},
+  {username: "MikeLikesBikes", body: "Love a good bike me", club_id: 1},
+  {username: "MikeLikesBikes", body: "Love a good bike me", club_id: 1},
+  {username: "MikeLikesBikes", body: "Love a good bike me", club_id: 1},
+  {username: "TerryCruz", body: "We need to play more attacking. What is the manager thinking", club_id: 8},
+  {username: "AlexEatsApples43", body: "A lot of progress being made in the first team and U18's", club_id: 12}
 ])
 Player.create!([
   {firstName: "Alex", lastName: "Iwobi", club_id: 1, age: 22, position: "Forward", nationality: "Nigeria"},
@@ -26,6 +29,7 @@ Player.create!([
   {firstName: "Eden", lastName: "Hazard", club_id: 6, age: 24, position: "Forward", nationality: "Belgium"},
   {firstName: "Mesut", lastName: "Ozil", club_id: 1, age: 30, position: "Forward", nationality: "Germany"},
   {firstName: "Charlie", lastName: "Adams", club_id: 8, age: 33, position: "Midfielder", nationality: "England"},
-  {firstName: "Wasteman", lastName: "Morata", club_id: 6, age: 23, position: "Forward", nationality: "Nigeria"},
-  {firstName: "Morgan", lastName: "Kennedy", club_id: 12, age: 24, position: "Midfielder", nationality: "Spain"}
+  {firstName: "Morgan", lastName: "Kennedy", club_id: 12, age: 24, position: "Midfielder", nationality: "Spain"},
+  {firstName: "Ross", lastName: "Barkley", club_id: 6, age: 25, position: "Midfielder", nationality: "England"},
+  {firstName: "Micheal", lastName: "Morata", club_id: 6, age: 23, position: "Forward", nationality: "Spain"}
 ])
