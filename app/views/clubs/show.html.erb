@@ -1,38 +1,34 @@
   <p id="notice"><%= notice %></p>
 
   <h1><%= @club.name %></h1>
-  <h3><%= @club.location %></h3>
-  <h4><%= @club.date_of_establishment %></h4>
-
+  <h3>Location: <%= @club.location %></h3>
+  <h4>Founded: <%= @club.date_of_establishment %></h4>
   <h1>Players</h1>
-  <thead>
-    <tr>
-      <th></th>
-  </thead>
-  <table>
-  <tbody>
-    <tr>
-      <td class="col-md-3">Name<td>
-      <td class="col-md-3">Age</td>
-      <td class="col-md-3">Nationality</td>
-      <td class="col-md-3">Position</td>
-    </tr>
-          <tr>
-  <% @players.each do |player| %>
 
-      <td class="col-md-3"><%= player.firstName %> <%= player.lastName %></td>
-      <td class="col-md-3"><%= player.age %></td>
-      <td class="col-md-3"><%= player.nationality %></td>
-      <td class="col-md-3"><%= player.position %></td>
-
-
-        <td><%= link_to 'Edit', edit_player_path(player) %></td>
-      <td><%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <table class="table table-striped table-dark">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Nationality</th>
+        <th scope="col">Position</th>
+        <th scope="col">Age</th>
+        <th scope="col">Options</th>
       </tr>
-
-  <% end %>
-  </tbody>
+    </thead>
+    <tbody>
+      <% @players.each do |player| %>
+      <tr>
+        <th scope="row"><%= player.firstName %> <%= player.lastName %></th>
+        <td><%= player.nationality %></td>
+        <td><%= player.position %></td>
+        <td><%= player.age %></td>
+        <td><%= link_to 'Edit', edit_player_path(player) %>
+      <%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+      <% end %>
+    </tbody>
   </table>
+<div class="comments">
   <h3> Comments </h3>
 
   <% @club.comments.each do |comment| %>
@@ -60,4 +56,5 @@
   <%= form.submit %>
 </div>
   <% end %>
+  </div>
   <%= link_to 'Back', clubs_path %>

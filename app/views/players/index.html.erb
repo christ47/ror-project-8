@@ -1,36 +1,34 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Players</h1>
-
-<table>
-  <thead>
+<table class="table">
+  <thead class="thead-dark">
     <tr>
-      <th colspan="3"></th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Age</th>
+      <th scope="col">Nationality</th>
+      <th scope="col">Position</th>
+      <th scope="col">Options</th>
     </tr>
   </thead>
-
   <tbody>
+  <% @players.each do |player| %>
     <tr>
-      <td>First Name</td>
-      <td>Last Name</td>
-      <td>Age</td>
-      <td>Nationality</td>
-      <td>Position</td>
+      <th scope="row"><%= player.firstName %></th>
+  <td><%= player.lastName %></td>
+  <td><%= player.age %></td>
+  <td><%= player.nationality %></td>
+    <td><%= player.position %></td>
+  <td><%= link_to 'Show', player %>
+    <%= link_to 'Edit', edit_player_path(player) %>
+  <%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
-    <% @players.each do |player| %>
-      <tr>
-        <td><%= player.firstName %></td>
-        <td><%= player.lastName %></td>
-        <td><%= player.age %></td>
-        <td><%= player.nationality %></td>
-        <td><%= player.position %></td>
-        <td><%= link_to 'Show', player %></td>
-        <td><%= link_to 'Edit', edit_player_path(player) %></td>
-        <td><%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
     <% end %>
   </tbody>
 </table>
+
+
 
 <br>
 
